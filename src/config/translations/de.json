@@ -1,16 +1,25 @@
 {
   "header": {
-    "home": "Startseite",
-    "about_us": "Über uns",
-    "our_technology": "Unsere Technologie",
-    "contact": "Kontakt"
+      "home": "Startseite",
+      "about_us": "Über uns",
+      "our_technology": "Unsere Technologie",
+      "contact": "Kontakt"
   },
   "content": {
-    "welcome_message": "Willkommen bei Metala",
-    "revolutionizing_cancer_treatment": "Revolutionierung der Krebsbehandlung mit innovativer Nanotechnologie",
-   
-   
-    "telefone": "+55 (61) 98130-0249",
-    "email": "metala.nanofluidos@gmail.com"
+      "welcome_message": "Willkommen bei Metala",
+      "slogan": "Revolutionierung der Krebsbehandlung mit innovativer Nanotechnologie",
+
+      "home_text1": "Bei Metala revolutionieren wir die Art und Weise, wie Krebs behandelt wird. Unsere Innovation kombiniert das Beste der Nanotechnologie mit der Radiofrequenzablation (RFA), um eine sicherere, weniger invasive und hochwirksame Behandlung anzubieten.",
+      "home_text2": "Wir verwenden ein Graphen-Nanofluid, das die Ablation verstärkt und Tumore schneller und präziser eliminiert. Mit dieser Technologie erreichen wir die Effizienz fortschrittlicher Behandlungen wie der Mikrowellenablation (MWA), jedoch mit der Sicherheit, Kosteneffizienz und dem geringeren Toxizitätsrisiko der RFA. Das bedeutet, dass die Behandlung schonender für den Körper ist, weniger Nebenwirkungen hat, eine schnellere Genesung der Patienten ermöglicht und gleichzeitig effizienter bei der Krebsbekämpfung ist.",
+
+      "our_technology_text1": "Bei Metala sind wir mit der Entwicklung von Graphen-Nanofluid an der Spitze der Nanotechnologie, einer Innovation, die die Krebsbehandlung neu definiert. Diese Spitzentechnologie ist darauf ausgelegt, die Wirksamkeit der Radiofrequenzablation (RFA) zu erhöhen, indem Nanopartikel direkt auf Krebszellen gerichtet werden.",
+      "our_technology_text2": "Nach der Injektion in das Tumorgewebe dringen Graphen-Nanopartikel in die Krebszellen ein und machen das bösartige Gewebe anfälliger für die durch die Ablation erzeugte Hitze. Dies ermöglicht eine präzisere und vollständige Tumorzerstörung, während die Auswirkungen auf das umliegende gesunde Gewebe minimiert werden. Dieser Ansatz verbessert nicht nur die Wirksamkeit der Behandlung, sondern reduziert auch das Risiko eines Wiederauftretens von Krebs.",
+
+      "about_us_text1": "Unsere Mission ist klar: die Krebsbehandlung zu transformieren, indem wir einen effizienteren, zugänglicheren Ansatz anbieten, der die Lebensqualität der Patienten in den Vordergrund stellt.",
+      "about_us_text2": "Bei Metala sind wir überzeugt, dass es möglich ist, Krebs sicherer, wirksamer und erschwinglicher zu behandeln. Unser Team, das über umfangreiche Erfahrung in der Nanotechnologie und Onkologie verfügt, steht an der Spitze der Innovation und entwickelt Lösungen, die Krebs effizient bekämpfen, Komplikationen minimieren und die Genesung der Patienten beschleunigen.",
+
+      "contact_text1": "Haben Sie Fragen? Möchten Sie zusammenarbeiten?",
+      "contact_text2": "Kontaktieren Sie uns! Wir sind immer bereit zuzuhören und zusammenzuarbeiten. Ob es um Partnerschaften, Fragen zu unseren Technologien oder um Geschäftsmöglichkeiten geht, unser Team steht Ihnen zur Verfügung.",
+      "email": "metala.nanofluidos@gmail.com"
   }
 }

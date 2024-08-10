@@ -1,17 +1,18 @@
 import React from 'react';
-import { Box, DropButton } from 'grommet';
+import { Box, DropButton, Image } from 'grommet';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+
 
 function LanguageSelector() {
   const { i18n } = useTranslation();
   const [language, setLanguage] = React.useState(i18n.language);
 
   const languages = [
-    { label: 'English', value: 'en' },
-    { label: 'Português', value: 'pt' },
-    { label: 'Español', value: 'es' },
-    { label: 'Français', value: 'fr' },
+    { label: 'English', value: 'en', flag: '../assets/flags/us.svg' },
+    { label: 'Português', value: 'pt', flag: '../assets/flags/br.svg' },
+    { label: 'Español', value: 'es', flag: '../assets/flags/es.svg' },
+    { label: 'Français', value: 'fr', flag: '../assets/flags/fr.svg' },
   ];
 
   const handleLanguageChange = (value) => {
@@ -19,17 +20,23 @@ function LanguageSelector() {
     i18n.changeLanguage(value);
   };
 
+  const selectedLanguage = languages.find((lang) => lang.value === language);
+
   return (
     <StyledDropButton
-      label={languages.find((lang) => lang.value === language)?.label || "Select Language"}
+      label={<Image src={selectedLanguage?.flag} alt={selectedLanguage?.label} width="24px" />}
       dropContent={
         <Box pad="small" background="light-2">
           {languages.map((lang) => (
             <StyledLanguageOption
               key={lang.value}
               onClick={() => handleLanguageChange(lang.value)}
+              direction="row"
+              align="center"
+              gap="small"
             >
-              {lang.label}
+              <Image src={lang.flag} alt={lang.label} width="24px" />
+              <span>{lang.label}</span>
             </StyledLanguageOption>
           ))}
         </Box>

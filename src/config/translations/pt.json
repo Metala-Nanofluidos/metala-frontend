@@ -1,14 +1,26 @@
 {
     "header": {
-      "home": "Início",
-      "about_us": "Sobre Nós",
-      "our_technology": "Nossa Tecnologia",
-      "contact": "Contato"
+        "home": "Início",
+        "about_us": "Sobre Nós",
+        "our_technology": "Nossa Tecnologia",
+        "contact": "Contato"
     },
     "content": {
-      "welcome_message": "Bem-vindo à Metala",
-        "revolutionizing_cancer_treatment": "Revolucionando o tratamento do câncer com nanotecnologia inovadora"
+     
+        "welcome_message": "Bem-vindo à Metala",
+        "slogan": "Revolucionando o tratamento do câncer com nanotecnologia inovadora",
+
+        "home_text1": "Na Metala, estamos revolucionando a forma como o câncer é tratado. Nossa inovação combina o melhor da nanotecnologia com a ablação por radiofrequência (RFA) para oferecer um tratamento mais seguro, menos invasivo e extremamente eficaz.",
+        "home_text2": "Utilizamos um nanofluido de grafeno que potencializa a ablação, eliminando os tumores de forma mais rápida e precisa. Com essa tecnologia, conseguimos a eficiência de tratamentos avançados, como a ablação por micro-ondas (MWA), mas com a segurança, custo e menor risco de toxicidade da RFA. Isso significa que o tratamento é mais suave para o corpo, com menos efeitos colaterais, recuperação mais rápida do paciente e ao mesmo tempo, mais eficiente na eliminação do câncer.",
+   
+        "our_technology_text1": "Na Metala, estamos na vanguarda da nanotecnologia com o desenvolvimento do nanofluido de grafeno, uma inovação que está redefinindo o tratamento do câncer. Essa tecnologia de ponta é projetada para aumentar a eficácia da ablação por radiofrequência (RFA), direcionando as nanopartículas diretamente para as células cancerígenas.",
+        "our_technology_text2": "Ao serem injetadas no local do tumor, as nanopartículas de grafeno penetram nas células cancerígenas e tornam o tecido maligno mais suscetível ao calor gerado pela ablação. Isso permite uma destruição mais precisa e completa do tumor, enquanto reduz ao mínimo o impacto sobre os tecidos saudáveis ao redor. Essa abordagem não só melhora a eficácia do tratamento, como também diminui os riscos de recorrência do câncer.",
+
+        "about_us_text1": "A nossa missão é clara: transformar o tratamento do câncer, oferecendo uma abordagem mais eficiente, acessível e que prioriza a qualidade de vida dos pacientes.",
+        "about_us_text2": "Na Metala, somos movidos pela convicção de que é possível tratar o câncer de forma mais segura, eficaz e acessível. Nossa equipe, com vasta experiência em nanotecnologia e oncologia, está na vanguarda da inovação, desenvolvendo soluções que combatem o câncer com eficiência, minimizam complicações e aceleram a recuperação dos pacientes.",
+
+        "contact_text1": "Tem alguma dúvida? Gostaria de colaborar? ",
+        "contact_text2": "Entre em contato conosco! Estamos sempre prontos para ouvir e colaborar. Seja para discutir parcerias, tirar dúvidas sobre nossas tecnologias ou explorar oportunidades de negócios, nossa equipe está à disposição.",
+        "email": "metala.nanofluidos@gmail.com"
     }
 }
-  
-  
