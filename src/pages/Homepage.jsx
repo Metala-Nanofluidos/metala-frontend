@@ -9,7 +9,7 @@ import { ColorBox1, ColorBox2, ColorBox3 } from "../components/Boxes";
 
 const Homepage = () => {
   const { t } = useTranslation();
-  const size = React.useContext(ResponsiveContext); // Captura o tamanho da viewport
+  const size = React.useContext(ResponsiveContext);
 
   return (
     <Grommet theme={customTheme}>
@@ -23,17 +23,17 @@ const Homepage = () => {
               <Image src={Logo} width="150px" height="100px" />
             </Box>
             {size === 'small' ? (
-              <DropButton
+              <StyledDropButton
                 label="Menu"
                 dropAlign={{ top: 'bottom', right: 'right' }}
                 dropContent={
-                  <Box pad="medium" background="light-2">
+                  <StyledDropContent>
                     <StyledButton label={t('header.home')} href="#" />
                     <StyledButton label={t('header.about_us')} href="#" />
                     <StyledButton label={t('header.our_technology')} href="#" />
                     <StyledButton label={t('header.contact')} href="#" />
                     <LanguageSelector />
-                  </Box>
+                  </StyledDropContent>
                 }
               />
             ) : (
@@ -100,10 +100,28 @@ const StyledButton = styled(Button)`
   border: 1px solid white;
   color: white;
   background: transparent;
-  white-space: nowrap; /* Evita quebra de linha nos botões */
+  white-space: nowrap; 
+  margin: 5px 0;
   &:hover {
     background: rgba(255, 255, 255, 0.2);
   }
+`;
+
+const StyledDropButton = styled(DropButton)`
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  white-space: nowrap;
+  border-radius: 8px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+`;
+
+const StyledDropContent = styled(Box)`
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 8px; 
 `;
 
 const Content = styled.div`
@@ -128,7 +146,7 @@ const customTheme = {
     },
     breakpoints: {
       small: {
-        value: 900, // small definido para 1000px
+        value: 900,
       },
       medium: {
         value: 1536,
