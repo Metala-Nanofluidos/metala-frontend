@@ -2,31 +2,38 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../assets/Metala-branco.png";
 import VantaBackground from "../components/Cells";
-import { Grommet, Page, Box, Image, Button } from "grommet";
+import LanguageSelector from "../components/Language";
+import { Grommet, Box, Image, Button } from "grommet";
+import { useTranslation } from "react-i18next";
+import { ColorBox1, ColorBox2, ColorBox3 } from "../components/Boxes";
 
 const Homepage = () => {
+  const { t } = useTranslation();
+
   return (
     <Grommet theme={customTheme}>
       <Container>
         <VantaBackgroundContainer>
           <VantaBackground />
-          <StyledHeader>
-            <Box direction="row" align="center" justify="between" fill="horizontal">
-              <Box direction="row" align="center" gap="medium">
-                <Image src={Logo} width="150px" height="100px" />
-              </Box>
-              <Box direction="row" gap="medium">
-                <StyledButton label="Home" href="#" />
-                <StyledButton label="About Us" href="#" />
-                <StyledButton label="Our Technology" href="#" />
-                <StyledButton label="Contact" href="#" />
-              </Box>
-            </Box>
-          </StyledHeader>
         </VantaBackgroundContainer>
+        <StyledHeader>
+          <Box direction="row" align="center" justify="between" fill="horizontal">
+            <Box direction="row" align="center" gap="medium">
+              <Image src={Logo} width="150px" height="100px" />
+            </Box>
+            <Box direction="row" gap="medium">
+              <StyledButton label={t('header.home')} href="#" />
+              <StyledButton label={t('header.about_us')} href="#" />
+              <StyledButton label={t('header.our_technology')} href="#" />
+              <StyledButton label={t('header.contact')} href="#" />
+              <LanguageSelector />
+            </Box>
+          </Box>
+        </StyledHeader>
         <Content>
-          {/* Aqui vai o conteúdo principal da página */}
-          <h1>Bem-vindo à nossa página</h1>
+          <ColorBox1 />
+          <ColorBox2 />
+          <ColorBox3 />
         </Content>
       </Container>
     </Grommet>
@@ -40,43 +47,50 @@ const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background-color: black;
+  overflow-x: hidden; 
 `;
 
 const VantaBackgroundContainer = styled.div`
-  position: relative;
-  height: 300px; /* Altura total do header com a animação */
-  width: 100%;
-`;
-
-const StyledHeader = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 100px; /* Ajuste conforme necessário */
+  height: 100vh;
+  width: 100%;
+  z-index: 1; 
+  pointer-events: none; 
+`;
+
+const StyledHeader = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px; 
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   color: white;
-  z-index: 2;
+  z-index: 3; 
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 20px;
+  margin-bottom: 0px;
 `;
 
 const StyledButton = styled(Button)`
-  border: 1px solid white; /* Borda branca */
-  color: white; /* Texto branco */
+  border: 1px solid white;
+  color: white;
   background: transparent;
   &:hover {
-    background: rgba(255, 255, 255, 0.2); /* Fundo levemente branco ao passar o mouse */
+    background: rgba(255, 255, 255, 0.2);
   }
 `;
 
 const Content = styled.div`
-  padding: 20px;
-  color: white;
-  text-align: center;
-  flex: 1;
+  z-index: 2; 
+  margin-top: 150px; 
+  position: relative;
 `;
 
 const customTheme = {

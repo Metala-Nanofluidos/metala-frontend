@@ -1,0 +1,12 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about_us": "À propos",
+    "our_technology": "Notre Technologie",
+    "contact": "Contact"
+  },
+  "content": {
+    "welcome_message": "Bienvenue chez Metala",
+    "revolutionizing_cancer_treatment": "Révolutionner le traitement du cancer avec une nanotechnologie innovante"
+  }
+}

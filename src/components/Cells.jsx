@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import CELLS from 'vanta/dist/vanta.cells.min';
+import FOG from 'vanta/dist/vanta.fog.min';
 
 const VantaBackground = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -9,7 +10,7 @@ const VantaBackground = () => {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        CELLS({
+        FOG({
           el: vantaRef.current,
           THREE: THREE,
           mouseControls: true,
@@ -17,9 +18,10 @@ const VantaBackground = () => {
           gyroControls: false,
           minHeight: 200.00,
           minWidth: 200.00,
-          scale: 1.00,
-          color1: 0xffffff, // Altere para a cor desejada (exemplo: azul)
-          color2: 0xffffff  // Altere para a cor desejada (exemplo: verde)
+          highlightColor: 0x727272,
+          midtoneColor: 0xd2d2d2,
+          lowlightColor: 0xc8c8c8,
+          baseColor: 0xffffff 
         })
       );
     }
