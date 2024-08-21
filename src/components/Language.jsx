@@ -3,16 +3,20 @@ import { Box, DropButton, Image } from 'grommet';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
+import BrasilFlag from '../assets/flags/brasil.png';
+import USFlag from '../assets/flags/estados-unidos.png';
+import SpainFlag from '../assets/flags/espanha.png';
+import FranceFlag from '../assets/flags/franca.png';
 
 function LanguageSelector() {
   const { i18n } = useTranslation();
   const [language, setLanguage] = React.useState(i18n.language);
 
   const languages = [
-    { label: 'English', value: 'en', flag: '../assets/flags/us.svg' },
-    { label: 'Português', value: 'pt', flag: '../assets/flags/br.svg' },
-    { label: 'Español', value: 'es', flag: '../assets/flags/es.svg' },
-    { label: 'Français', value: 'fr', flag: '../assets/flags/fr.svg' },
+    { label: 'Português', value: 'pt', flag: BrasilFlag },
+    { label: 'English', value: 'en', flag: USFlag },
+    { label: 'Español', value: 'es', flag: SpainFlag },
+    { label: 'Français', value: 'fr', flag: FranceFlag },
   ];
 
   const handleLanguageChange = (value) => {
@@ -23,23 +27,19 @@ function LanguageSelector() {
   const selectedLanguage = languages.find((lang) => lang.value === language);
 
   return (
-    <StyledDropButton
+    <StyledDropButton 
       label={<Image src={selectedLanguage?.flag} alt={selectedLanguage?.label} width="24px" />}
       dropContent={
-        <Box pad="small" background="light-2">
+        <StyledDropContent style={{ overflow:'hidden'}}>
           {languages.map((lang) => (
             <StyledLanguageOption
               key={lang.value}
               onClick={() => handleLanguageChange(lang.value)}
-              direction="row"
-              align="center"
-              gap="small"
             >
               <Image src={lang.flag} alt={lang.label} width="24px" />
-              <span>{lang.label}</span>
             </StyledLanguageOption>
           ))}
-        </Box>
+        </StyledDropContent>
       }
     />
   );
@@ -49,17 +49,34 @@ export default LanguageSelector;
 
 const StyledDropButton = styled(DropButton)`
   border: 1px solid white;
-  color: white;
   background: transparent;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 `;
 
+const StyledDropContent = styled(Box)`
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+`;
+
 const StyledLanguageOption = styled(Box)`
-  padding: 8px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
   &:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
   }
 `;

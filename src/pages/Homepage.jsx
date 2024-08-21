@@ -14,9 +14,9 @@ const Homepage = () => {
   return (
     <Grommet theme={customTheme}>
       <Container>
-        <VantaBackgroundContainer>
+         <VantaBackgroundContainer>
           <VantaBackground />
-        </VantaBackgroundContainer>
+        </VantaBackgroundContainer> 
         <StyledHeader>
           <Box direction="row" align="center" justify="between" fill="horizontal">
             <Box direction="row" align="center" gap="medium">
@@ -37,7 +37,7 @@ const Homepage = () => {
                 }
               />
             ) : (
-              <Box direction="row" gap="small" justify="end" fill="horizontal">
+              <Box direction="row" gap="small" justify="end"  align="center" fill="horizontal">
                 <StyledButton label={t('header.home')} href="#" />
                 <StyledButton label={t('header.about_us')} href="#" />
                 <StyledButton label={t('header.our_technology')} href="#" />
@@ -48,8 +48,8 @@ const Homepage = () => {
           </Box>
         </StyledHeader>
         <Content>
-          <ColorBox1 />
           <ColorBox2 />
+          <ColorBox1 />
           <ColorBox3 />
         </Content>
       </Container>
@@ -64,7 +64,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
 `;
 
@@ -127,7 +127,11 @@ const StyledDropContent = styled(Box)`
 const Content = styled.div`
   z-index: 2;
   margin-top: 150px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80vw;
 `;
 
 const customTheme = {
