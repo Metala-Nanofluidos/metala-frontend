@@ -121,10 +121,9 @@ const ColorBox3 = () => (
       <StyledIcon src={DonaHelena}></StyledIcon>
       <StyledIcon src={BioMinas}></StyledIcon>
       <StyledIcon src={IfRond}></StyledIcon>
-      <StyledIcon></StyledIcon>
-      <StyledIcon></StyledIcon>
-      <StyledIcon></StyledIcon>
-      <StyledIcon></StyledIcon>
+      <StyledIcon src={Uern}></StyledIcon>
+      <StyledIcon src={PucGoias}></StyledIcon>
+      <StyledIcon src={AutonomaOccidente}></StyledIcon>
     </ContainerPartners>
   </StyledBox>
 );
@@ -132,15 +131,18 @@ const ColorBox3 = () => (
 export { ColorBox1, ColorBox2, ColorBox3 };
 
 const ContainerPartners = styled(Box)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  justify-items: center;
+  align-items:center;
+  margin-top: 10px;
 `;
 
 const StyledIcon = styled(Image)`
-  width: 50px;
-  height: 50px;
+  width: 120px;
+  height: auto;
 `;
 
 const StyledBox = styled(Box)`
@@ -175,10 +177,12 @@ const StyledAvatar = styled(Avatar)`
 `;
 
 const ContainerCards = styled(Box)`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 5px;
+  justify-items: center;
+  align-items:center;
 `;
 
 const StyledCard = styled(Card)`
