@@ -19,6 +19,7 @@ import IfRond from '../assets/partners/ifrond.png';
 import Uern from '../assets/partners/uern.png';
 import PucGoias from '../assets/partners/pucgoias.png';
 import AutonomaOccidente from '../assets/partners/autonomaoccidente.png';
+import Nanofluido from '../assets/nanofluido.png';
 
 
 const ColorBox1 = () => (
@@ -49,14 +50,14 @@ const ColorBox2 = () => (
       <Heading>Nossa Teconologia</Heading>
     </StyledContainer>
     <StyledContainer>
-      <Image src={Logo} width="300px" height="200px"></Image>
+      <Image src={Nanofluido} width="auto" height="200px"></Image>
     </StyledContainer>
-    <Text>Nanofluido de grafeno</Text>
+    {/* <Text>Nanofluido de grafeno</Text>
     <Text>Sensibilização de células tumorais</Text>
     <Text>Intensificam a queima do tumor utilizando RFA, ajudando a remover o tumor por completo</Text>
     <Text>Mais seguro e barato que o MWA</Text>
     <Text>Biocompatibilidade</Text>
-    <Text>Doses mínimas</Text>
+    <Text>Doses mínimas</Text> */}
   </StyledBox>
 );
 
@@ -128,7 +129,19 @@ const ColorBox3 = () => (
   </StyledBox>
 );
 
-export { ColorBox1, ColorBox2, ColorBox3 };
+const ColorBox4 = () => (
+  <StyledBox>
+    <StyledContainer>
+      <StyledHeading>Contato</StyledHeading>
+    </StyledContainer>
+    <StyledContactContainer>
+      <StyledName>E-mail:</StyledName>
+      <StyledText>metala.nanofluidos@gmail.com</StyledText>
+    </StyledContactContainer>
+  </StyledBox>
+);
+
+export { ColorBox1, ColorBox2, ColorBox3, ColorBox4 };
 
 const ContainerPartners = styled(Box)`
   display: grid;
@@ -149,6 +162,8 @@ const StyledBox = styled(Box)`
   display: flex;
   margin-top: 40px;
   padding: 20px;
+  width: 90%;
+  min-width: 800px;
   color: black;
   font-size: 2rem;
   border-radius: 10px;
@@ -209,4 +224,9 @@ const StyledName = styled(Text)`
   font-weight: 900;
   font-size: 1.2rem;
   text-align: center;
+`;
+
+const StyledContactContainer = styled(Box)`
+
+
 `;

@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../assets/Metala-branco.png";
-import VantaBackground from "../components/Cells";
 import LanguageSelector from "../components/Language";
 import { Grommet, Box, Image, Button, ResponsiveContext, DropButton } from "grommet";
 import { useTranslation } from "react-i18next";
-import { ColorBox1, ColorBox2, ColorBox3 } from "../components/Boxes";
+import { ColorBox1, ColorBox2, ColorBox3, ColorBox4 } from "../components/Boxes";
 
 const Homepage = () => {
   const { t } = useTranslation();
@@ -14,9 +13,6 @@ const Homepage = () => {
   return (
     <Grommet theme={customTheme}>
       <Container>
-         <VantaBackgroundContainer>
-          <VantaBackground />
-        </VantaBackgroundContainer> 
         <StyledHeader>
           <Box direction="row" align="center" justify="between" fill="horizontal">
             <Box direction="row" align="center" gap="medium">
@@ -51,6 +47,7 @@ const Homepage = () => {
           <ColorBox2 />
           <ColorBox1 />
           <ColorBox3 />
+          <ColorBox4/>
         </Content>
       </Container>
     </Grommet>
@@ -66,17 +63,8 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-`;
-
-const VantaBackgroundContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 1;
-  pointer-events: none;
+  background-color: #9d3e90;
+  padding: 10px;
 `;
 
 const StyledHeader = styled.div`
